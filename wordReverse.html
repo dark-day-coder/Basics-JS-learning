@@ -13,11 +13,16 @@
         function nameSwap(str) {
             console.log(str)
             var arr = str.split(' ');
+            console.log(arr)
             arr.reverse();
             strRev = arr.join(' ');
             return strRev;
         }
         console.log(nameSwap('sibu dhital'))
+        function nameSwapOneLine(str){
+            return str.split(' ').reverse().join(' ');
+        }
+        console.log(nameSwapOneLine('fucker mother'))
     </script>
 </body>
 </html>
