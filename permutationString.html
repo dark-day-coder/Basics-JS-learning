@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+   function permString(str1,str2){
+      str1.toLowerCase();
+      str2.toLowerCase();
+      console.log(str1);
+      console.log(str2);
+      var arr1 = str1.split('');
+      console.log(arr1)
+      var arr2 = str2.split('');
+      console.log(arr2)
+      arr1.sort();
+      arr2.sort();
+      console.log(arr1)
+      console.log(arr2)
+      str101 = arr1.join('')
+      str102 = arr2.join('')
+      console.log(str101);
+      console.log(str102);
+      if(str101 === str102)
+         return 'supplied strings are permutation string';
+      else
+         return 'supplied strings are not permutation string';
+   }
+   var firstWord = prompt('enter first word: ');
+   var secondWord = prompt('enter second word: ');
+   console.log(permString(firstWord,secondWord));
+   </script>
+</body>
+</html>

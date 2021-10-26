@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Calory Calculator</title>
+</head>
+
+<body>
+   <script>
+      function inputCaloriesByDay(day) {
+         day = day.toLowerCase();
+         switch (day) {
+            case 'monday':
+               return 2300;
+               break;
+            case 'tuesday':
+               return 1500;
+               break;
+            case 'wednesday':
+               return 1800;
+               break;
+            case 'thursday':
+               return 2300;
+               break;
+            case 'friday':
+               return 2400;
+               break;
+            case 'saturday':
+               return 1500;
+               break;
+            case 'sunday':
+               return 1500;
+               break;
+            default:
+               return 'Please choose a valid day';
+         }
+      }
+      // console.log(inputCaloriesByDay('FriDay'))
+      function getTotalCalories(){
+         return inputCaloriesByDay('monday') + inputCaloriesByDay('tuesday')+ inputCaloriesByDay('wednesday') + inputCaloriesByDay('thursday')+ inputCaloriesByDay('friday') + inputCaloriesByDay('saturday')+ inputCaloriesByDay('sunday');
+      }
+      // console.log(getTotalCalories())
+      function getIdealCalories(){
+         var idealDailyCalories = 1900;
+         return idealDailyCalories * 7;
+      }
+      // console.log(getIdealCalories())
+      function CalculateHealthPlan(){
+         var actualCalories = getTotalCalories();
+         var idealCalories = getIdealCalories();
+
+         if(actualCalories === idealCalories){
+            console.log('You ate just the right amount of food!');
+         }
+         else if (actualCalories > idealCalories){
+            console.log('Time to head to the gym!');
+         }
+         else {console.log('Time for seconds!')}
+      }
+      CalculateHealthPlan();
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      function rangeAdd(array){
+         var max = Math.max(array[0],array[1])
+         var min = Math.min(array[0],array[1])
+         var sum = 0;
+         for(var i = min;i<=max;i++){
+            sum += i;
+         }
+         return sum;
+      }
+      var firstNum = prompt('enter first num:');
+      var a = parseInt(firstNum);
+      var lastNum = prompt('enter last num:');
+      var b = parseInt(lastNum)
+      var addition = rangeAdd([a,b])
+      console.log(addition);
+   </script>
+</body>
+</html>

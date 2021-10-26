@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Random insult generator</title>
+</head>
+<body>
+   <script>
+      var randomBodyParts = ['hand','legs','eyes','stomach'];
+      var randomAdjactives = ['smiley', 'boring', 'stupid','lazy'];
+      var randomWords = ['fuck', 'shit', 'stool','smoke','food'];
+      var randomBodyPart = randomBodyParts[Math.floor(Math.random() * 4)];
+      var randomAdjactive = randomAdjactives[Math.floor(Math.random() * 4)];
+      var randomWord = randomWords[Math.floor(Math.random() * 5)];
+      document.write('Your '+randomBodyPart+' is like '+randomAdjactive + ' '+randomWord);
+   </script>
+</body>
+</html>

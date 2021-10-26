@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      var userName = prompt('what is your name?');
+      if(userName){
+         console.log('hello '+userName);
+      }else {console.log('hello');}
+      var userQuestion = prompt('you can ask a question:');
+      var randomNumber = Math.floor(Math.random() * 7);
+      // console.log(randomNumber);
+      var eightBall = '';
+      switch (randomNumber) {
+         case 0:
+            eightBall = 'Better not tell you now.';
+            break;
+         case 1:
+            eightBall = 'Concentrate and ask again.';
+            break;
+         case 2:
+            eightBall = 'Reply hazy try again';
+            break;
+         case 3:
+            eightBall = 'Cannot predict now';
+            break;
+         case 4:
+            eightBall = 'My reply is no.';
+            break;
+         case 5:
+            eightBall = 'My sources say no';
+            break;
+         case 6:
+            eightBall = 'Outlook not so good';
+            break;
+         case 7:
+            eightBall = 'Signs point to yes';
+            break;
+         default:
+            eightBall = 'fuck off';
+      }
+      console.log(eightBall);
+      document.write('user\'s question: '+userQuestion+' and 8 ball reply is ' +eightBall);
+   </script>
+</body>
+
+</html>

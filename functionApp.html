@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      function getUserChoice(userInput){
+         this.userInput = userInput.toLowerCase();
+         if(userInput === 'bear' || userInput === 'human' || userInput === 'gun'){
+            return userInput;
+         }else{
+            return 'please enter a valid input';
+         }
+      }
+      //console.log(getUserChoice('human'));
+      function getComputerChoice(){
+         var computerChoices = ['human', 'gun', 'bear'];
+         var computerChoice = computerChoices[Math.floor(Math.random()*3)];
+         return computerChoice;
+      }
+      // console.log(getComputerChoice());
+      function determineWinner(userChoice, computerChoice){
+         if(userChoice === computerChoice){
+            return 'It\'s a tie';
+         }
+         if(userChoice === 'human'){
+            if(computerChoice === 'bear')
+               return 'you have been mauled by a bear';
+            else
+               return 'You have disarmed a gun';
+         }
+         if(userChoice === 'bear'){
+            if(computerChoice === 'human')
+               return 'you just killed a human';
+            else
+               return 'you have been shot by gun';
+         }
+         if(userChoice === 'gun'){
+            if(computerChoice === 'bear')
+               return 'you just killed a bear';
+            else 
+               return 'your gun has been disarmed';
+         }
+         
+      }
+      // console.log(determineWinner('gun','bear'))
+      function playGame(){
+         var promptUserChoice = prompt('please choose bear, human or gun');
+         var userChoice = getUserChoice(promptUserChoice);
+         var computerChoice = getComputerChoice();
+         // console.log(userChoice);
+         // console.log(computerChoice);
+         document.write(determineWinner(userChoice,computerChoice));
+      }
+      playGame();
+   </script>
+</body>
+</html>
